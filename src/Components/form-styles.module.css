@@ -8,6 +8,7 @@
   height: 30px;
   padding: 1px 5px;
   outline: none;
+  font-family: 'Raleway', sans-serif;
 }
 
 .form {
@@ -20,6 +21,7 @@
 }
 
 .btn {
+  font-family: 'Raleway', sans-serif;
   width: 110px;
   height: 30px;
   margin-left: auto;

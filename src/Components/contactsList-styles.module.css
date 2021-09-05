@@ -14,9 +14,11 @@
 
 .span {
   font-size: 14px;
+  font-weight: 300;
 }
 
 .btn {
+  font-family: 'Raleway', sans-serif;
   background-color: transparent;
   border: none;
   height: 25px;
