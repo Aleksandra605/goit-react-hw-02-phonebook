@@ -1,6 +1,7 @@
 import React from 'react';
 import shortid from 'shortid';
 import PropTypes from 'prop-types';
+import s from './form-styles.module.css';
 
 class Form extends React.Component {
   static propTypes = {
@@ -28,9 +29,10 @@ class Form extends React.Component {
     const { name, number } = this.state;
 
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>Name</label>
+      <form onSubmit={this.handleSubmit} className={s.form}>
+        <label className={s.label}>Name</label>
         <input
+          className={s.input}
           type="text"
           name="name"
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -39,8 +41,9 @@ class Form extends React.Component {
           value={name}
           onChange={this.handleChange}
         />
-        <label>Number</label>
+        <label className={s.label}>Number</label>
         <input
+          className={s.input}
           type="tel"
           name="number"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -49,7 +52,9 @@ class Form extends React.Component {
           value={number}
           onChange={this.handleChange}
         />
-        <button type="submit">Add to contacts</button>
+        <button type="submit" className={s.btn}>
+          Add to contacts
+        </button>
       </form>
     );
   }

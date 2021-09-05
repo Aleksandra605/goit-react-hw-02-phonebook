@@ -47,7 +47,6 @@ class App extends React.Component {
   };
 
   deleteContact = id => {
-    console.log(id);
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(el => el.id !== id),
     }));
@@ -64,7 +63,12 @@ class App extends React.Component {
             contacts={visibleContacts}
             onDelete={this.deleteContact}
           />
-        ) : null}
+        ) : (
+          <ContactList
+            contacts={this.state.contacts}
+            onDelete={this.deleteContact}
+          />
+        )}
       </div>
     );
   }
