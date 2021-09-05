@@ -8,7 +8,9 @@ export default function ContactList({ contacts, onDelete }) {
         const { name, number, id } = contact;
         return (
           <li key={id} className={s.item}>
-            {name}: {number}
+            <p className={s.p}>
+              {name} <span className={s.span}>{number}</span>
+            </p>
             <button
               type="button"
               onClick={() => onDelete(id)}
